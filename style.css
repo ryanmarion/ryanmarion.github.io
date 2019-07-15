@@ -1,0 +1,193 @@
+
+html,
+body{
+	width:100%;
+	height:100%;
+	margin:0;
+	overflow-x:hidden
+}
+
+@keyframes slideinleft{
+	0%{ 
+		opacity:0
+	}
+	50%{
+		opacity:0;
+		transform:translatex(-5%)
+	}
+	100%{
+		opacity:1
+	}
+}
+
+@keyframes slideinright{
+	0%{
+		opacity:0
+	}
+	50%{
+		opacity:0;
+		transform:translatex(5%)
+	}
+	100%{
+		opacity:1
+	}
+}
+@keyframes fadein{0%{ opacity:0}100%{opacity:1}}
+
+@-webkit-keyframes slideinleft{0%{ opacity:0}50%{opacity:0;transform:translatex(-5%)}100%{opacity:1}}
+
+@-webkit-keyframes slideinright{0%{ opacity:0}50%{opacity:0;transform:translatex(5%)}100%{opacity:1}}
+
+@-webkit-keyframes fadein{0%{ opacity:0}100%{opacity:1}}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 0.125rem;
+    box-shadow: 0 1px 1px 0 rgba(60, 64, 67, 0.08), 0 1px 3px 1px rgba(60, 64, 67, 0.16);
+    padding: 1rem;
+    margin-bottom: 2rem;
+	display:block;
+}
+
+.project-link {
+    color: inherit;
+}
+
+.project-col {
+    flex: 1 1 auto;
+}
+
+/*
+.proj_img {
+    width: 9rem;
+    height: 9rem;
+    margin: 0 auto 0.25rem;
+}*/
+
+.project-logo {
+	width: 9rem;
+    height: 9rem;
+    margin: 0 auto 0.25rem;
+	display:block;
+}
+
+
+
+.flex-container{display:flex;align-items:center;width:100%;height:100%;flex-wrap:wrap}
+
+.item1{flex-grow:27;flex-shrink:1;flex-basis:0}.item2{flex:1;display:block}.item3{display:none;flex:1}
+
+.item4{flex:1;display:none}
+
+.item5{flex:25;display:block}
+
+.item6{flex:25;display:none}
+
+.post{animation-duration:1s;animation-name:slideinright;-webkit-animation-duration:1s;-webkit-animation-name:slideinright;max-width:650px;padding-top:30px;padding-bottom:30px;text-align:justify}
+
+.blogmenu{display:none;text-align:right;padding-right:4px}a{color:#428BCA;text-decoration:none}
+
+.header{font-family:'Roboto',sans-serif;font-size:72px;text-align:right;font-weight:500;line-height:1.1;color:#333}
+
+.subheader{font-family:'Advent Pro',sans-serif;font-size:23px;text-align:right;line-height:1.1;font-weight:500;color:#333}
+
+.p2{font-family:'Open Sans',sans-serif;font-size:17px;padding-top:10px;line-height:175%}.center{text-align:center!important}
+
+.menuitem{font-family:'Open Sans',sans-serif;font-size:15px}
+
+.separator{animation-duration:.5s;animation-name:fadein;-webkit-animation-duration:.5s;-webkit-animation-name:fadein;vertical-align:middle}
+
+.separator img{max-height:600px;height:auto}
+
+.separator_landscape{animation-duration:.5s;animation-name:fadein;-webkit-animation-duration:.5s;-webkit-animation-name:fadein;margin-left:auto;margin-right:auto}
+
+.separator_landscape img{width:100%;height:auto}
+
+.leftsidecontent{animation-duration:1s;animation-name:slideinleft;-webkit-animation-duration:1s;-webkit-animation-name:slideinleft;display:block;align:right}
+
+.rightcontent{animation-duration:1s;animation-name:slideinright;-webkit-animation-duration:1s;-webkit-animation-name:slideinright}
+
+.menuitem1{animation-duration:.75s;animation-name:fadein;-webkit-animation-duration:.75s;-webkit-animation-name:fadein}
+
+.menuitem2{animation-duration:1.05s;animation-name:fadein;-webkit-animation-duration:1.05s;-webkit-animation-name:fadein}
+
+.menuitem3{animation-duration:1.35s;animation-name:fadein;-webkit-animation-duration:1.35s;-webkit-animation-name:fadein}
+
+.menuitem4{animation-duration:1.55s;animation-name:fadein;-webkit-animation-duration:1.55s;-webkit-animation-name:fadein}
+
+.throbber{padding-top:50px}.loading{display:none}.buttons{list-style-type:none;padding-top:10px;padding-left:0}li{display:inline}
+
+.button{display:inline-block;cursor:pointer;font-family:sans-serif;padding:.5em 1em;margin-right:.5em;color:#444;background-color:#E6E6E6;border-radius:2px}
+
+.button:hover,.button:focus{background-image:linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1))}
+
+.button:active{box-shadow:0 0 0 1px rgba(0,0,0,.15) inset,0 0 6px rgba(0,0,0,.2) inset}
+
+.button:focus{outline:0}
+
+.button-primary{background-color:#0078e7;color:#fff}
+
+@media (max-width: 1350px){.p2{ font-size:15px}}
+
+@media (max-width: 1200px){
+	.header{ font-size:60px}
+	.subheader{font-size:19px!important}
+	.p2{font-size:12px}
+}
+
+@media (max-width: 990px){
+	.header{ font-size:52px}
+	.subheader{font-size:17px!important}
+	.p2{font-size:10px}
+}
+
+@media (max-width: 900px){
+	.flex-container{ display:block}
+	.header{margin-top:20px;font-size:64px;text-align:center!important}
+	.subheader{font-size:23px!important;text-align:center!important}
+	.p2{font-size:17px;text-align:center!important}
+	
+	@keyframes slideinleft{0%{ opacity:0}50%{opacity:0;transform:translatey(-15%)}100%{opacity:1;transform:none}}
+	
+	@keyframes slideinright{0%{ opacity:0}50%{opacity:0}100%{opacity:1}}
+	
+	@-webkit-keyframes slideinleft{0%{ opacity:0}50%{opacity:0;transform:translatey(-15%)}100%{opacity:1;transform:none}}
+	
+	@-webkit-keyframes slideinright{0%{ opacity:0}50%{opacity:0}100%{opacity:1}}
+	
+	.flex-container{height:auto!important}
+	
+	.flex-item{min-width:100%;height:auto}
+	
+	.item1{flex:1}.item3{flex:1;display:block}
+	
+	.item2{display:none}li{display:inline}
+	
+	.button{min-width:80%;margin-bottom:10px;margin-right:0}
+	
+	.separator_landscape img{max-height:1px}
+}
+	
+@media (max-width: 565px){
+	.header{ font-size:50px!important}
+	.subheader{font-size:16px!important}
+	.p2{font-size:14px}
+}
+	
+@media (max-width: 480px){
+	.header{ font-size:43px!important}
+	.subheader{font-size:17px!important}
+	.p2{font-size:10px}.item4{flex:1;display:block}
+	.item3{display:none}
+	.separator_landscape img{max-height:1px;width:auto}
+	.button{font-size:14px}
+}
+		
+@media (max-width: 353px){
+	.header{ font-size:34px!important}
+	.subheader{font-size:13px!important}
+	.p2{font-size:9px}
+	.button{font-size:12px}
+}
+
+/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
