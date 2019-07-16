@@ -32,17 +32,18 @@
 			<img src=images/4.jpg id=separator2>
 		</div>
 		<div class="flex-item item5 rightcontent p2" id=content>
-			Product Engineer at 
+			Product Engineer at
 			<a href=https://www.micron.com/>Micron Technology</a>
 			<br>
-			B.S. Electrical Engineering from 
+			B.S. Electrical Engineering from
 			<a href=https://www.iastate.edu/>Iowa State University</a>
 			<br>
 			<ul class=buttons>
 				<li><a class=button href="https://docs.google.com/file/d/0B7Yqer9Ol1FNdlNaTWNfOFRSa00/edit?usp=sharing"> R&eacute;sum&eacute; </a>
 				</li>
 				<li><a class=button href=https://www.linkedin.com/in/rsmarion/> LinkedIn </a></li>
-				<li><a class="button" id=showblog href=#page3> Featured Project </a></li>
+				<li><a class="button" id=github href=https://github.com/ryanmarion> Github </a></li>
+				<li><a class="button button-primary" id=showblog href=#page3> Featured Project </a></li>
 			</ul>
 		</div>
 		<div class="flex-item item6 rightcontent p2" id=blogposts>
@@ -53,23 +54,23 @@
 				  </div>
 				  <div class="project-col">
 					<h3 class="project-title">Flack</h3>
-					<p class="project-description">A chat web application based on the popular chat app Slack.</p>
+					<p class="project-description">A chat web application based on the popular app Slack.</p>
 					<p class="project-url">now-ryanmarion-flack.com</p>
 				  </div>
 				</a>
 			</div>
 		</div>
 	</div>
-				
+
 <script type=text/javascript>
 	document.getElementById("showblog").onclick=function(){document.getElementById("blogposts").style.display="block";
 	document.getElementById("content").style.display="none";
 	document.getElementById("menu").style.display="block";
-	document.getElementById("surya").style.fontSize="32px";
+	document.getElementById("ryan").style.fontSize="32px";
 	if(window.matchMedia("(min-width: 900px)").matches){
 		document.getElementById("surya").style.paddingTop="40px"
 	}
-	
+
 	document.getElementById("tagline").style.display="none";
 	document.getElementsByTagName("body")[0].style.height="auto";
 	document.getElementsByClassName("flex-container")[0].style.height="auto";
@@ -82,29 +83,42 @@
 	window.onload=function(){checkURL();
 	setInterval(function(){checkURL()},250)};
 	var lasturl="";
-	
+
 	function checkURL(){var a=window.location.hash;
 	if(a!=lasturl){lasturl=a;loadPage(a)}}
-	
-	function loadPage(b){if(b.indexOf("#page")>-1){b=b.replace("#page","");
-	
-	var c="page="+b}else{var c="lol=0"}var a=new XMLHttpRequest();
-	
-	a.open("POST","load_page.php",false);
-	
-	a.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-	
-	a.onreadystatechange=function(){if(a.readyState==4&&a.status==200){document.getElementById("blogpost").style.display="none";
-	
-	document.getElementById("blogpost").innerHTML=a.response;document.getElementById("blogposts").style.display="none";
-	
-	triggerPseudoReflow();document.getElementById("blogpost").style.display="block";
-	
-	document.getElementById("blogposts").style.display="block"}};
-	
-	a.send(c)}function triggerPseudoReflow(){var a=document.getElementById("blogposts");
-	
-	var b=a.cloneNode(true);a.parentNode.replaceChild(b,a)}
+
+	function loadPage(b){
+		if(b.indexOf("#page")>-1){
+			b=b.replace("#page","");
+			var c="page="+b
+		} else{
+			var c="lol=0"
+		}
+
+		var a=new XMLHttpRequest();
+
+		a.open("POST","load_page.php",false);
+
+		a.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+
+		a.onreadystatechange=function(){if(a.readyState==4&&a.status==200){document.getElementById("blogpost").style.display="none";
+
+		document.getElementById("blogpost").innerHTML=a.response;
+
+		document.getElementById("blogposts").style.display="none";
+
+		triggerPseudoReflow();document.getElementById("blogpost").style.display="block";
+
+		document.getElementById("blogposts").style.display="block"}};
+
+		a.send(c)
+	}
+
+	function triggerPseudoReflow(){
+		var a=document.getElementById("blogposts");
+
+		var b=a.cloneNode(true);a.parentNode.replaceChild(b,a)
+	}
 </script>
 
 
