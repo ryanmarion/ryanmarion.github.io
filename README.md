@@ -1,2 +1,2 @@
 # ryanmarion.github.io
-A personal landing page...
+A personal landing page.
